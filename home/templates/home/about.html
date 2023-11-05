@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+    {% block start %}
+
+    <div class="mt-5 mx-auto col-8 ">
+        <center><h1 class="text-bg-primary">About Our Recipe Web Application</h1></center>
+        <hr>
+
+        <p>Welcome to our Recipe Web Application, your go-to platform for storing and sharing delicious recipes with a community of passionate food enthusiasts. Our platform is designed to help you organize your culinary journey and discover new flavors to tantalize your taste buds.</p>
+        <p>With our user-friendly interface, you can easily upload, store, and share your favorite recipes along with captivating images and detailed descriptions. Whether you are a seasoned chef or an amateur cook, our application is the perfect place to explore, create, and savor a diverse range of culinary delights.</p>
+        <p>Join our growing community and embark on a flavorful adventure with like-minded individuals who share your love for cooking and experimenting with different ingredients. Together, let's celebrate the art of cooking and the joy of sharing delectable recipes.</p>
+        <p>Stay tuned for regular updates and exciting features as we strive to enhance your cooking experience and make your journey in the kitchen even more delightful and rewarding.</p>
+        <p>For any queries or suggestions, feel free to reach out to us at <a href="mailto:virendramali1807@gmail.com">virendramali1807@gmail.com</a>.</p>
+    </div>
+    <center>
+    <label  for="direct">Go to Recipes World -> </label>
+    <a href="/receipes/" class="btn btn-success">Login</a>
+    <a href="/register/" class="btn btn- bg-primary">Register</a>
+</center>
+    
+    {% comment %}     
+       <a href="/contact/">Contact</a> {% endcomment %}
+
+    {% comment %} <table class="container">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Can Vote</th>
+        </tr>
+        
+        {% for p in peoples %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.age}}</td>
+            {% if p.age >= 18 %}
+            <td>Yes</td>
+            {% else %}
+            <td>NO</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        
+       </table> {% endcomment %}
+
+    {% endblock %}

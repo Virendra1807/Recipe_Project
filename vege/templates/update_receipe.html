@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% block start %}
+
+{% comment %} Form to collect Data  {% endcomment %}
+  <div class="container mt-5">
+    <form class="col-6 mx-auto card p-4 shadow-lg" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+      <h1>Update Recipe</h1>
+      <hr />
+      <div class="form-group">
+        <label for="Name">Recipe Name</label>
+        <input name="receipe_nm" type="text" value="{{receipe.receipe_name}}" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label  for="Description">Recipe Description</label>
+        <textarea name="receipe_desc" class="form-control" required>{{receipe.receipe_desc}}</textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="Image">Recipe Image</label>
+        <input name="receipe_img" type="file" class="form-control"/>
+        <small id="DescriptionHelp" class="form-text text-muted">We can share your recipes with anyone else.</small>
+        {% comment %} <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> {% endcomment %}
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+
+      <button type="submit" class="btn btn-success">Update Recipe</button>
+    </form>
+
+  </div>
+{% endblock %}
